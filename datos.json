@@ -1,0 +1,258 @@
+{
+  "Ferias": [
+    {
+      "id": 1,
+      "title": "Feria de Empleo Tech",
+      "descripcion": "Encuentre oportunidades de carrera en el sector tecnológico.",
+      "location": "Tuxtla Gutierrez, Chiapas",
+      "date": "04 de Abril de 2024",
+      "type": "Presencial",
+      "requirements": [
+        "Currículum actualizado",
+        "Portafolio de proyectos"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Expo Empleo Internacional",
+      "descripcion": "Conectando talentos con empresas globales.",
+      "location": "Tuxtla Gutierrez, Chiapas",
+      "date": "15 de Mayo de 2024",
+      "type": "Virtual",
+      "requirements": [
+        "Inglés avanzado",
+        "Experiencia previa"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Feria de Empleo Salud y Bienestar",
+      "descripcion": "Oportunidades laborales en el sector de la salud.",
+      "location": "Tuxtla Gutierrez, Chiapas",
+      "date": "23 de Junio de 2024",
+      "type": "Presencial",
+      "requirements": [
+        "Título profesional",
+        "Certificaciones"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Feria de Empleo de Hospitalidad",
+      "descripcion": "Descubre carreras en hotelería y turismo.",
+      "location": "Tuxtla Gutierrez, Chiapas",
+      "date": "10 de Julio de 2024",
+      "type": "Presencial",
+      "requirements": [
+        "Experiencia en servicio al cliente",
+        "Disponibilidad para viajar"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Cumbre de Empleo Financiero",
+      "descripcion": "Construye tu futuro en el mundo financiero.",
+      "location": "Tuxtla Gutierrez, Chiapas",
+      "date": "20 de Agosto de 2024",
+      "type": "Virtual",
+      "requirements": [
+        "Licenciatura en Finanzas",
+        "Conocimientos de análisis de datos"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Feria de Empleo Creativo",
+      "descripcion": "Encuentra tu lugar en las industrias creativas.",
+      "location": "Tuxtla Gutierrez, Chiapas",
+      "date": "12 de Septiembre de 2024",
+      "type": "Presencial",
+      "requirements": [
+        "Portafolio creativo",
+        "Habilidades de comunicación"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Conferencia de Innovación Tecnológica",
+      "descripcion": "Explora las últimas tendencias y avances en tecnología.",
+      "location": "Tuxtla Gutierrez, Chiapas",
+      "date": "5 de Octubre de 2024",
+      "type": "Virtual",
+      "requirements": [
+        "Interés en tecnología",
+        "Inscripción previa"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Expo de Emprendimiento Social",
+      "descripcion": "Descubre cómo el emprendimiento puede impulsar el cambio social.",
+      "location": "Tuxtla Gutierrez, Chiapas",
+      "date": "15 de Noviembre de 2024",
+      "type": "Presencial",
+      "requirements": [
+        "Ideas o proyectos sociales",
+        "Compromiso con el cambio"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Cumbre de Tecnología Médica",
+      "descripcion": "Explora las innovaciones tecnológicas aplicadas al campo de la medicina.",
+      "location": "Tuxtla Gutierrez, Chiapas",
+      "date": "25 de Enero de 2025",
+      "type": "Virtual",
+      "requirements": [
+        "Interés en medicina y tecnología",
+        "Conocimientos básicos de ciencias médicas"
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Feria de Empleo Ambiental",
+      "descripcion": "Encuentra oportunidades laborales en el sector ambiental y de sostenibilidad.",
+      "location": "Tuxtla Gutierrez, Chiapas",
+      "date": "10 de Marzo de 2025",
+      "type": "Presencial",
+      "requirements": [
+        "Conciencia ambiental",
+        "Habilidades en ciencias ambientales o afines"
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Conferencia de Inteligencia Artificial",
+      "descripcion": "Descubre cómo la inteligencia artificial está transformando diversas industrias.",
+      "location": "Tuxtla Gutierrez, Chiapas",
+      "date": "20 de Abril de 2025",
+      "type": "Virtual",
+      "requirements": [
+        "Interés en inteligencia artificial",
+        "Conocimientos básicos de programación"
+      ]
+    }
+  ],
+  "Empresas": [
+    {
+      "id": 1,
+      "RFC": "ABC123456XYZ",
+      "nombre_empresa": "Tecnologías Avanzadas S.A. de C.V.",
+      "encargado_RH": "Alejandro Gómez"
+    },
+    {
+      "id": 2,
+      "RFC": "DEF789012UVW",
+      "nombre_empresa": "Innovaciones Digitales S.A.P.I. de C.V.",
+      "encargado_RH": "María Rodríguez"
+    },
+    {
+      "id": 3,
+      "RFC": "GHI345678WXY",
+      "nombre_empresa": "Servicios Médicos Integral S.A. de C.V.",
+      "encargado_RH": "Juan Pérez"
+    },
+    {
+      "id": 4,
+      "RFC": "JKL901234ABC",
+      "nombre_empresa": "Hospitalidad y Turismo Internacional S.A. de C.V.",
+      "encargado_RH": "Ana García"
+    },
+    {
+      "id": 5,
+      "RFC": "MNO567890PQR",
+      "nombre_empresa": "Finanzas Globales S.A.P.I. de C.V.",
+      "encargado_RH": "Luis Martínez"
+    },
+    {
+      "id": 6,
+      "RFC": "STU234567FGH",
+      "nombre_empresa": "Consultoría Estratégica Empresarial S.C.",
+      "encargado_RH": "Laura Hernández"
+    },
+    {
+      "id": 7,
+      "RFC": "IJK789012LMN",
+      "nombre_empresa": "Ingeniería y Desarrollo Industrial S.A. de C.V.",
+      "encargado_RH": "Carlos López"
+    },
+    {
+      "id": 8,
+      "RFC": "OPQ345678RST",
+      "nombre_empresa": "BioTech Innovations S.A.P.I. de C.V.",
+      "encargado_RH": "Elena Ramírez"
+    },
+    {
+      "id": 9,
+      "RFC": "UVW901234XYZ",
+      "nombre_empresa": "Comercializadora Internacional de Productos S.A. de C.V.",
+      "encargado_RH": "Javier Vargas"
+    },
+    {
+      "id": 10,
+      "RFC": "YZA567890BCD",
+      "nombre_empresa": "Desarrollos Inmobiliarios del Sureste S.A. de C.V.",
+      "encargado_RH": "Paulina González"
+    },
+    {
+      "id": 11,
+      "RFC": "BCD123456EFG",
+      "nombre_empresa": "Energía Renovable y Sostenibilidad S.A. de C.V.",
+      "encargado_RH": "Roberto Sánchez"
+    },
+    {
+      "id": 12,
+      "RFC": "EFG789012HIJ",
+      "nombre_empresa": "Soluciones Logísticas Integradas S.A. de C.V.",
+      "encargado_RH": "Patricia Mendoza"
+    },
+    {
+      "id": 13,
+      "RFC": "HIJ345678KLM",
+      "nombre_empresa": "Consultoría Legal y Tributaria S.C.",
+      "encargado_RH": "David Castro"
+    },
+    {
+      "id": 14,
+      "RFC": "LMN901234OPQ",
+      "nombre_empresa": "Innovación en Telecomunicaciones S.A. de C.V.",
+      "encargado_RH": "Verónica Díaz"
+    },
+    {
+      "id": 15,
+      "RFC": "OPQ567890RST",
+      "nombre_empresa": "Manufactura Avanzada y Automatización S.A. de C.V.",
+      "encargado_RH": "Francisco Ruiz"
+    },
+    {
+      "id": 16,
+      "RFC": "RST123456UVW",
+      "nombre_empresa": "Desarrollo de Software Innovador S.A. de C.V.",
+      "encargado_RH": "Diana Martínez"
+    },
+    {
+      "id": 17,
+      "RFC": "UVW789012XYZ",
+      "nombre_empresa": "Servicios de Ingeniería Ambiental S.A. de C.V.",
+      "encargado_RH": "Raúl Sánchez"
+    },
+    {
+      "id": 18,
+      "RFC": "XYZ345678ABC",
+      "nombre_empresa": "Consultoría en Marketing Estratégico S.C.",
+      "encargado_RH": "Sofía López"
+    },
+    {
+      "id": 19,
+      "RFC": "ABC901234DEF",
+      "nombre_empresa": "Investigación y Desarrollo Farmacéutico S.A. de C.V.",
+      "encargado_RH": "Mario González"
+    },
+    {
+      "id": 20,
+      "RFC": "DEF567890GHI",
+      "nombre_empresa": "Distribuidora de Productos Orgánicos S.A. de C.V.",
+      "encargado_RH": "Laura Rodríguez"
+    }
+  ]
+}

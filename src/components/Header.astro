@@ -1,0 +1,116 @@
+---
+import Navigation from "./Navigation.svelte";
+---
+
+<header>
+  <nav>
+    <div class="logo">
+      <a href="/">
+        <img width="100px" height="100px" src="/escudoblanco.avif" alt="Escuedo Blanco de del estado de Chiapas" />
+      </a>
+    </div>
+    <Navigation client:only />
+  </nav>
+</header>
+
+<style>
+  header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--verde-600);
+    height: 9rem;
+  }
+
+  .logo img {
+    width: 15rem;
+  }
+
+  .menu ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+  }
+
+  .menu ul li a {
+    text-decoration: none;
+    color: var(--blanco-200);
+    transition:
+      text-decoration 0.3s ease,
+      color 0.3s ease;
+  }
+
+  .menu ul li a:hover {
+    text-decoration: underline;
+    color: var(--dorado-300);
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  /* Estilos para pantallas más pequeñas */
+  @media (max-width: 768px) {
+    .logo img {
+      width: 15rem;
+    }
+
+    .menu-toggle {
+      display: block;
+    }
+
+    .menu-toggle button {
+      background: var(--dorado-300);
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 0.3rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .menu-toggle .hamburger i {
+      color: var(--blanco-200);
+      background: transparent;
+    }
+
+    .ri-menu-line,
+    .ri-close-line {
+      display: block;
+    }
+
+    .menu:not(.show) .ri-close-line {
+      display: none;
+    }
+
+    .menu.show .ri-menu-line {
+      display: none;
+    }
+    .menu {
+      display: none;
+      position: absolute;
+      top: 9rem;
+      left: 0;
+      width: 100%;
+      background-color: var(--verde-500);
+      box-shadow: 0 2px 5px rgb(0, 0, 0, 0.1);
+      transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+      transform: scaleY(0);
+      transform-origin: top;
+      opacity: 0;
+    }
+
+    .menu.show {
+      display: block;
+      transform: scaleY(1);
+      opacity: 1;
+    }
+
+    .menu ul {
+      flex-direction: column;
+      padding: 3rem;
+    }
+  }
+</style>

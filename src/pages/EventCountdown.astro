@@ -1,0 +1,131 @@
+---
+import Layout from "@/layouts/Layout.astro";
+
+import { Ferias } from "@data";
+
+const NombreFeria = Ferias[0].title;
+---
+
+<Layout title="Proximo Evento">
+  <div class="container">
+    <h2>Cuenta regresiva para {NombreFeria}</h2>
+    <div class="countdown">
+      <div class="countdown-item">
+        <span id="days"></span>
+        <span>Días</span>
+      </div>
+      <div class="countdown-item">
+        <span id="hours"></span>
+        <span>Horas</span>
+      </div>
+      <div class="countdown-item">
+        <span id="minutes"></span>
+        <span>Minutos</span>
+      </div>
+      <div class="countdown-item">
+        <span id="seconds"></span>
+        <span>Segundos</span>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<script type="module">
+  // Fecha y hora del evento
+  const eventDate = new Date("2024-04-09T17:00:00");
+  const countdownContainer = document.querySelector(".countdown");
+  const daysElement = document.querySelector("#days");
+  const hoursElement = document.querySelector("#hours");
+  const minutesElement = document.querySelector("#minutes");
+  const secondsElement = document.querySelector("#seconds");
+
+  // Función para mostrar el tiempo restante
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = eventDate.getTime() - now;
+    // Calculo para obtener dias, horas, minutos y segundos restantes
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    // Actualizar los elementos del contador
+    if (daysElement) {
+      daysElement.textContent = days.toString();
+    }
+    // daysElement.textContent = days.toString();
+    if (hoursElement) {
+      hoursElement.textContent = hours.toString().padStart(2, "0");
+    }
+
+    if (minutesElement) {
+      minutesElement.textContent = minutes.toString().padStart(2, "0");
+    }
+
+    if (secondsElement) {
+      secondsElement.textContent = seconds.toString().padStart(2, "0");
+    }
+    // hoursElement.textContent = hours.toString().padStart(2, '0');
+    // minutesElement.textContent = minutes.toString().padStart(2, '0');
+    // secondsElement.textContent = seconds.toString().padStart(2, '0');
+
+    // Si el contador ha llegado a cero, detener la función de actualización
+    if (distance < 0) {
+      clearInterval(countdownInterval);
+      if (countdownContainer) {
+        countdownContainer.innerHTML = `<h3 style="color: var(--rojo-500); font-weight: bold; font-size: 1.5rem;">¡El evento ha finalizado!</h3>`;
+      }
+    }
+  }
+
+  // Iniciar la cuenta regresiva
+  const countdownInterval = setInterval(updateCountdown, 1000);
+</script>
+
+<style>
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    height: 46rem;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--dorado-900);
+    margin-bottom: 2rem;
+  }
+
+  .countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .countdown-item {
+    text-align: center;
+  }
+
+  .countdown-item span:first-child {
+    display: block;
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--rojo-500);
+  }
+
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 2rem;
+    }
+
+    .countdown-item span:first-child {
+      font-size: 1.5rem;
+    }
+  }
+</style>

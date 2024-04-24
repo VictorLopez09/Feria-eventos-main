@@ -1,0 +1,123 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Badge from "@/components/Badge.svelte";
+
+
+import { Ferias } from "@data";
+
+const userID = "abc123";
+const name = "Victor Hugo";
+const eventID = "eventID";
+const eventName = Ferias[0].title;
+const registrationDate = new Date().toLocaleString();
+const eventDate = Ferias[0].date;
+const location = Ferias[0].location;
+const tipoEvento = Ferias[0].type;
+
+
+let userData= {};
+let eventData= {};
+
+async function getData() {
+  try {
+    const responseUser = await fetch('https://tu-dominio.com/api/user');
+    const responseEvent = await fetch('https://tu-dominio.com/api/user');
+
+    const userDataJSON = await responseUser.json();
+    const eventDataJSON = await responseEvent.json();
+
+    userData = userDataJSON;
+    eventData = eventDataJSON;
+  } catch (error) {
+    console.error('Error al obtener los datos: ', error);
+  }
+}
+
+// Funcion para generar el codigo QR
+function generateQRCode(userID: string, eventID: string) {
+  return `https://api.qrserver.com/v1/create-qr-code/?data=${userID}-${eventID}&size=200x200`;
+}
+---
+
+
+<Layout title="Badge">
+
+  <div class="container">
+    <Badge client:only />
+    <!-- <h2>Gafete de Asistencia de {name}</h2> -->
+    <div class="badge">
+      <div class="badge-content">
+        <div class="badge-header">
+          <h3>{eventName}</h3>
+          <p><span>Fecha</span> &bull; {eventDate}</p>
+          <p><span>Fecha de registro</span> &bull; {registrationDate}</p>
+          <p><span>Lugar</span> &bull; {location}</p>
+          <p><span>Tipo</span> &bull; {tipoEvento}</p>
+        </div>
+        <figure class="qr-code">
+          <img src={generateQRCode(userID, eventID)} alt="QR Code" />
+        </figure>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  /* .container h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--dorado-900);
+  } */
+
+  .badge {
+    background-color: var(--blanco-300);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    text-align: center;
+    max-width: 30rem;
+    width: 100%;
+    transition:
+      box-shadow 0.3s ease,
+      transform 0.3s ease;
+  }
+
+  .badge:hover {
+    box-shadow: 0 0 20px var(--dorado-300);
+    transform: translateY(-5px) scale(1.05);
+  }
+  .badge-header h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--rojo-700);
+    font-weight: 500;
+  }
+
+  .badge-header p {
+    font-size: 0.9rem;
+    color: var(--dorado-900);
+  }
+
+  .badge-header p span {
+    font-weight: 600;
+    color: var(--verde-600);
+  }
+
+  .qr-code {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+</style>

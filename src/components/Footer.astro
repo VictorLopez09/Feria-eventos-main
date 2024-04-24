@@ -1,0 +1,93 @@
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <a href="/">
+        <img width="100px" height="100px" src="/escudoblanco.avif" alt="Escuedo Blanco de del estado de Chiapas" />
+      </a>
+    </div>
+    <div class="footer-links">
+      <h4>Enlaces</h4>
+      <ul>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/register">Registrarse</a></li>
+        <li><a href="/login">Iniciar Sesión</a></li>
+        <li><a href="/jobFairs">Eventos</a></li>
+        <li><a href="/AttedendanceBadge">Gafete</a></li>
+        <li><a href="/EventCountdown">Proximo Evento</a></li>
+      </ul>
+    </div>
+    <div class="footer-social">
+      <h4>Síguenos</h4>
+      <ul>
+        <li><a href="https://www.facebook.com/SeytCh"><i class="ri-facebook-line"></i></a></li>
+        <li><a href="https://twitter.com/SEyTChiapas"><i class="ri-twitter-x-fill"></i></a></li>
+      </ul>
+    </div>
+    <div class="footer-copyright">
+      <p>&copy; Todos los derechos reservados. Tu sitio web</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background-color: var(--verde-700);
+    color: var(--blanco-50);
+    padding: 0.4rem 1rem;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    place-items: center;
+    gap: 2rem;
+  }
+
+  .footer-logo img {
+    width: 15rem;
+    height: auto;
+  }
+
+  h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    color: var(--dorado-200);
+  }
+
+  .footer-links ul,
+  .footer-social ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-links a,
+  .footer-social a {
+    color: var(--blanco-300);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footer-links a:hover,
+  .footer-social a:hover {
+    color: var(--dorado-200);
+  }
+
+  .footer-copyright {
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .footer-container {
+      place-items: center;
+    }
+
+    .footer-logo img {
+      width: 10rem;
+    }
+  }
+</style>
